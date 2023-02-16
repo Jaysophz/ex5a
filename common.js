@@ -26,8 +26,9 @@ function calculate(p,d){
 	var chk = paceVaildate(pace);
 	if(chk != null) return chk;
 	//---------------------------
-	
+	var pc = paceCal(pace, dist);
+	if (pc != null) return pc
 	//---------------------------
 		msg = "successfully calculated!"
-		return {"status":1,"message":msg,"hour":hour,"min":min};
+		return {"status":1,"message":msg,"hour":pc.hour,"min":pc.min};
 }
